@@ -56,8 +56,8 @@ def init_control_points(src_img, row_block_num, col_block_num, min_offset=-10, m
     control_points[..., 1] = torch.empty((grid_rows, grid_cols), device=device).uniform_(min_offset, max_offset)
 
     # 初始化权重，默认设置为 1
-    weights = torch.ones((grid_rows, grid_cols), dtype=torch.float32, device=device).uniform_(min_offset, max_offset)
-    # weights = torch.ones((grid_rows, grid_cols), dtype=torch.float32, device=device)
+    # weights = torch.ones((grid_rows, grid_cols), dtype=torch.float32, device=device).uniform_(min_offset, max_offset)
+    weights = torch.ones((grid_rows, grid_cols), dtype=torch.float32, device=device)
 
     return control_points, weights
 
